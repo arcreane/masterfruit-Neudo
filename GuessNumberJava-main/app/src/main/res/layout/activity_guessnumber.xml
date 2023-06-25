@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Guessnumber">
+
+
+    <LinearLayout
+        android:id="@+id/optionsLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginBottom="30dp"
+        android:orientation="vertical"
+        android:visibility="visible">
+
+        <RadioGroup
+            android:id="@+id/difficulty"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RadioButton
+                android:id="@+id/easy"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Easy" />
+
+            <RadioButton
+                android:id="@+id/medium"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Medium" />
+
+            <RadioButton
+                android:id="@+id/hard"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Hard" />
+        </RadioGroup>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_margin="20dp"
+            android:onClick="startGame"
+            android:text="GO" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/gameLayout"
+        android:layout_width="match_parent"
+
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/score"
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:layout_margin="20dp"
+            android:text="Score : 0" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:text="Guess the number"
+            tools:layout_editor_absoluteX="26dp"
+            tools:layout_editor_absoluteY="226dp" />
+
+        <EditText
+            android:id="@+id/edit_text"
+            android:layout_width="192dp"
+            android:layout_height="40dp"
+            android:layout_margin="20dp"
+            android:inputType="number"
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteX="219dp"
+            tools:layout_editor_absoluteY="60dp" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_margin="20dp"
+            android:onClick="guess"
+            android:text="VALIDATE"
+            tools:layout_editor_absoluteX="130dp"
+            tools:layout_editor_absoluteY="120dp" />
+
+        <TextView
+            android:id="@+id/tryLeft"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_margin="30dp"
+            android:text="Essais restants : 10"
+            tools:layout_editor_absoluteX="16dp"
+            tools:layout_editor_absoluteY="226dp" />
+
+    </LinearLayout>
+
+</RelativeLayout>
